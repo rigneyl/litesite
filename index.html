@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plain Press</title>
+  <meta name="description" content="Misanthropic observational essays, prose, fragments, vignettes, short stories, poetry, and books.">
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #111111;
+      --muted: #555555;
+      --line: #d0d0d0;
+      --soft: #f7f7f7;
+      --max: 43em;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: auto; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 18px;
+      line-height: 1.75;
+      text-rendering: optimizeLegibility;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2.2em 1.1em 4em;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1.4em;
+      margin-bottom: 2.2em;
+    }
+
+    .site-title {
+      font-size: 1.35em;
+      letter-spacing: 0.01em;
+      margin: 0 0 0.35em;
+      font-weight: 700;
+    }
+
+    .tagline {
+      margin: 0 0 1.2em;
+      color: var(--muted);
+      max-width: 38em;
+    }
+
+    nav, .toc {
+      margin: 1.2em 0 0;
+      padding: 0;
+    }
+
+    nav a, .toc a, .back-top {
+      display: block;
+      padding: 0.42em 0;
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+      border-bottom: 1px solid var(--line);
+    }
+
+    a { color: var(--ink); }
+
+    main section {
+      margin: 0 0 3.5em;
+      padding-bottom: 2.2em;
+      border-bottom: 1px solid var(--line);
+    }
+
+    main section:last-child { border-bottom: 0; }
+
+    h1, h2, h3 {
+      line-height: 1.3;
+      margin: 0 0 0.65em;
+    }
+
+    h1 { font-size: 1.45em; font-weight: 700; }
+    h2 { font-size: 1.1em; font-weight: 700; }
+    h3 { font-size: 1em; font-weight: 700; }
+
+    p { margin: 0 0 1.25em; }
+
+    .meta, .note, .type {
+      color: var(--muted);
+      font-size: 0.92em;
+    }
+
+    .type {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6em;
+    }
+
+    .intro { max-width: 38em; }
+
+    article {
+      margin: 2em 0 0;
+      padding-top: 1.6em;
+      border-top: 1px solid var(--line);
+    }
+
+    article:first-of-type { border-top: 0; padding-top: 0; }
+
+    pre {
+      white-space: pre-wrap;
+      font-family: inherit;
+      line-height: 1.8;
+      margin: 0 0 1.25em;
+    }
+
+    .book {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      padding: 1em;
+      margin: 1.4em 0;
+    }
+
+    .button {
+      display: block;
+      border: 1px solid var(--ink);
+      padding: 0.65em 0.8em;
+      margin-top: 0.6em;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fff;
+      text-align: center;
+    }
+
+    .reader-note {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      padding: 1em;
+      margin: 1.4em 0;
+    }
+
+    .piece-nav {
+      font-size: 0.92em;
+      margin: 0 0 1em;
+      padding: 0.65em 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .piece-nav a {
+      display: inline-block;
+      margin-right: 1em;
+      padding: 0.2em 0;
+    }
+
+    footer {
+      margin-top: 3em;
+      padding-top: 1.5em;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92em;
+    }
+
+    code { font-family: inherit; }
+
+    @media (max-width: 540px) {
+      body { font-size: 17px; }
+      .wrap { padding: 1.4em 0.9em 3.2em; }
+    }
+
+    @media print {
+      nav, .toc, .back-top, .button, .reader-note, .piece-nav { display: none; }
+      body { font-size: 12pt; }
+      .wrap { max-width: none; padding: 0; }
+      section, article, header, footer { border: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header id="top">
+      <p class="site-title">Plain Press</p>
+      <p class="tagline">Misanthropic observations, essays, fragments, vignettes, poems, and small books for readers who still prefer words over noise.</p>
+      <nav aria-label="Site navigation">
+        <a href="#latest">Latest work</a>
+        <a href="#browse">Browse shelves</a>
+        <a href="#contents">Full contents</a>
+        <a href="#books">Books</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="latest">
+        <p class="type">Latest work</p>
+        <h1>Notes from the disappointed animal.</h1>
+        <p class="intro">A plain site for human observation: misanthropic essays, prose, fragments, vignettes, stories, poems, and books. Built for old devices, slow browsers, and Kindle reading.</p>
+        <p class="intro">No feed. No algorithm. No performance. Just pages.</p>
+
+        <div class="toc">
+          <a href="#people-in-the-supermarket">People In The Supermarket — essay</a>
+          <a href="#the-man-at-the-counter">The Man At The Counter — vignette</a>
+          <a href="#small-weather">Small Weather — poem</a>
+          <a href="#fragments">Three Fragments — fragments</a>
+          <a href="#the-room-without-pictures">The Room Without Pictures — short story</a>
+        </div>
+      </section>
+
+      <section id="browse">
+        <p class="type">Browse</p>
+        <h1>Choose a shelf</h1>
+        <p class="note">This is the main reading map. It keeps the site from feeling like one long mixed pile.</p>
+        <div class="toc">
+          <a href="#essays">Essays — longer human observations</a>
+          <a href="#prose">Prose — short literary pieces</a>
+          <a href="#fragments">Fragments — loose sentences and scraps</a>
+          <a href="#vignettes">Vignettes — small scenes</a>
+          <a href="#stories">Short stories — fiction</a>
+          <a href="#poetry">Poetry — narrow pages</a>
+          <a href="#books">Books — simple Stripe links</a>
+        </div>
+      </section>
+
+      <section id="contents">
+        <p class="type">Full contents</p>
+        <h1>All work on this page</h1>
+        <p class="note">Large plain links for Kindle browsers. Each individual piece also has quick links back to Contents and its shelf, so you never need to scroll through a whole section to return.</p>
+        <p class="note">Dates are used where they help: essays, prose, stories, vignettes, poems, and book releases. Fragments and aphorisms can stay undated or be grouped by month.</p>
+
+        <h2>Essays</h2>
+        <div class="toc">
+          <a href="#people-in-the-supermarket">People In The Supermarket</a>
+          <a href="#the-public-smile">The Public Smile</a>
+          <a href="#there-may-be-no-point">There May Be No Point</a>
+        </div>
+
+        <h2>Prose</h2>
+        <div class="toc">
+          <a href="#morning-in-the-quiet-house">Morning In The Quiet House</a>
+        </div>
+
+        <h2>Fragments</h2>
+        <div class="toc">
+          <a href="#fragments">Fragments</a>
+        </div>
+
+        <h2>Vignettes</h2>
+        <div class="toc">
+          <a href="#the-man-at-the-counter">The Man At The Counter</a>
+        </div>
+
+        <h2>Short stories</h2>
+        <div class="toc">
+          <a href="#the-room-without-pictures">The Room Without Pictures</a>
+        </div>
+
+        <h2>Poetry</h2>
+        <div class="toc">
+          <a href="#small-weather">Small Weather</a>
+          <a href="#after-people">After People</a>
+        </div>
+      </section>
+
+      <section id="essays">
+        <p class="type">Essays</p>
+        <h1>Observational essays</h1>
+        <p class="note">Longer pieces about people, work, streets, rooms, silence, ugliness, beauty, and the private disappointment of being human.</p>
+
+        <article id="people-in-the-supermarket">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#essays">Essays shelf</a></p>
+          <h2>People In The Supermarket</h2>
+          <p class="meta">Observational essay · 22 June 2026 · Sample</p>
+          <p>There is a woman in the supermarket holding two tomatoes like they have personally disappointed her. She turns one over, then the other. Behind her, a man sighs into his own chest because the world has asked him to wait twelve seconds.</p>
+          <p>I watch people in places like this and understand why I prefer distance. Not hatred exactly. Hatred takes too much energy and gives people too much importance. It is more like fatigue. A long, low tiredness with the species.</p>
+          <p>Still, there is beauty. The old man counting coins in his palm. The child pressing her face against the freezer glass. The checkout girl with blue fingernails moving groceries across the scanner as if she is playing a tired instrument.</p>
+          <p>Humanity is mostly noise, appetite, vanity, and queueing. But now and then, in the fluorescent ugliness, something small and almost holy slips through. It does not redeem us. Redemption is a salesman’s word. It only proves the light can still find a crack.</p>
+        </article>
+
+        <article id="the-public-smile">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#essays">Essays shelf</a></p>
+          <h2>The Public Smile</h2>
+          <p class="meta">Observational essay · 22 June 2026 · Sample</p>
+          <p>Everybody has learned the public smile. The mouth opens just enough to prove there is no danger. The eyes stay dead because the eyes are less obedient. You see it at work, in shops, at school gates, in meetings where people say wonderful when they mean nothing.</p>
+          <p>The modern person has been trained to seem fine. Pain gets ironed flat. Anger becomes professionalism. Loneliness becomes a calendar full of obligations. Even despair has to dress nicely before it is allowed indoors.</p>
+          <p>I do not trust the cheerful. Not because joy is impossible, but because cheerfulness is often security lighting around an empty building.</p>
+          <p>And yet sometimes a real smile appears by accident. A tired nurse at a crossing. A mechanic laughing alone at something on his phone. A stranger seeing a dog do something stupid. For one second the mask drops and the animal is visible. Poor thing. Beautiful thing. Doomed thing.</p>
+        </article>
+
+        <article id="there-may-be-no-point">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#essays">Essays shelf</a></p>
+          <h2>There May Be No Point</h2>
+          <p class="meta">Observational essay · 22 June 2026 · Sample</p>
+          <p>There may be no point to us. This is not as dramatic as people make it. The trees seem to handle it. The rain does not ask for meaning before falling on the roof. A bird will sing on a fence beside a roadkill possum and not consider the contradiction.</p>
+          <p>People are the ones who need a banner over everything. Purpose. Mission. Legacy. The great human craving to turn breathing into an achievement.</p>
+          <p>I have seen enough of us to doubt the grand story. We build little kingdoms out of plastic and debt. We mistake attention for love. We hurt each other in ordinary ways and then call it life experience.</p>
+          <p>But there is the afternoon light on a dirty kitchen wall. There is steam lifting from a cup. There is a woman on the bus resting her head against the window while the city drags itself home. These things do not save the species. They only make the sentence harder to finish.</p>
+        </article>
+      
+        <p><a class="back-top" href="#contents">Back to contents</a></p>
+      </section>
+
+      <section id="prose">
+        <p class="type">Prose</p>
+        <h1>Prose pieces</h1>
+        <p class="note">Short, shaped paragraphs. Not quite essay. Not quite story. A room, a mood, a thought with cigarette ash on it.</p>
+
+        <article id="morning-in-the-quiet-house">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#prose">Prose shelf</a></p>
+          <h2>Morning In The Quiet House</h2>
+          <p class="meta">Prose · 22 June 2026 · Sample</p>
+          <p>The house had the moral temperature of an apology nobody wanted to make. Outside, the bins waited by the kerb like obedient animals. Inside, the kettle clicked off and left the room with nothing but its own thinking.</p>
+          <p>He stood there in his socks, half alive, considering the great fraud of another day.</p>
+        </article>
+      
+        <p><a class="back-top" href="#contents">Back to contents</a></p>
+      </section>
+
+      <section id="fragments">
+        <p class="type">Fragments</p>
+        <h1>Fragments</h1>
+        <p class="note">Loose pieces. Scraps. Sentences that survived the notebook.</p>
+
+        <article class="fragment">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#fragments">Fragments shelf</a></p>
+          <p class="meta">Fragment · Undated</p>
+          <p>I did not become antisocial. I became unconvinced.</p>
+        </article>
+
+        <article class="fragment">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#fragments">Fragments shelf</a></p>
+          <p class="meta">Fragment · Undated</p>
+          <p>The crowd is always most dangerous when it believes it is being kind.</p>
+        </article>
+
+        <article class="fragment">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#fragments">Fragments shelf</a></p>
+          <p class="meta">Fragment · Undated</p>
+          <p>Some people do not want truth. They want permission with better lighting.</p>
+        </article>
+      
+        <p><a class="back-top" href="#contents">Back to contents</a></p>
+      </section>
+
+      <section id="vignettes">
+        <p class="type">Vignettes</p>
+        <h1>Vignettes</h1>
+        <p class="note">Small scenes. A face in a shop. A train station. A kitchen. A moment that explains too much.</p>
+
+        <article class="vignette" id="the-man-at-the-counter">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#vignettes">Vignettes shelf</a></p>
+          <h2>The Man At The Counter</h2>
+          <p class="meta">Vignette · 22 June 2026 · Sample</p>
+          <p>He counted his coins slowly, not because he lacked money, but because it was the last piece of control available to him. The girl behind the counter smiled the tired smile of someone paid to forgive the public eight hours at a time.</p>
+          <p>Behind them both, a screen shouted specials into the air.</p>
+        </article>
+      
+        <p><a class="back-top" href="#contents">Back to contents</a></p>
+      </section>
+
+      <section id="stories">
+        <p class="type">Short stories</p>
+        <h1>Short stories</h1>
+        <p class="note">Fiction with a human bruise. Small worlds, uneasy rooms, people trying to escape themselves and failing honestly.</p>
+
+        <article id="the-room-without-pictures">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#stories">Stories shelf</a></p>
+          <h2>The Room Without Pictures</h2>
+          <p class="meta">Short story · 22 June 2026 · Sample opening</p>
+          <p>When Mara moved into the room, she noticed there were no marks on the walls. No nail holes. No faded rectangles where photographs had protected the paint from sunlight. It was a room that had refused memory.</p>
+          <p>That should have comforted her. Instead, it made her feel expected.</p>
+        </article>
+      
+        <p><a class="back-top" href="#contents">Back to contents</a></p>
+      </section>
+
+      <section id="poetry">
+        <p class="type">Poetry</p>
+        <h1>Poetry</h1>
+        <p class="note">Plain poems. No ornament unless the wound requires it.</p>
+
+        <article class="poem" id="small-weather">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#poetry">Poetry shelf</a></p>
+          <h2>Small Weather</h2>
+          <p class="meta">Poem · 22 June 2026 · Sample</p>
+          <pre>The room was quiet
+but not kind.
+
+A cup cooled
+beside the bed.
+
+Morning arrived
+without apology.</pre>
+        </article>
+
+        <article class="poem" id="after-people">
+          <p class="piece-nav"><a href="#contents">Contents</a> <a href="#poetry">Poetry shelf</a></p>
+          <h2>After People</h2>
+          <p class="meta">Poem · 22 June 2026 · Sample</p>
+          <pre>I have learned
+not to hate the crowd.
+
+Only to step aside
+when it starts
+calling itself
+history.</pre>
+        </article>
+      
+        <p><a class="back-top" href="#contents">Back to contents</a></p>
+      </section>
+
+      <section id="books">
+        <p class="type">Books</p>
+        <h1>Books</h1>
+        <p class="note">Simple book sales. No cart. No account. Replace the sample Stripe links with your real payment links.</p>
+
+        <div class="book">
+          <h3>The Cage Of Convenience</h3>
+          <p class="meta">Essay collection · PDF / EPUB</p>
+          <p>A collection of essays on comfort, dependency, machines, and the slow surrender of human agency.</p>
+          <a class="button" href="https://buy.stripe.com/replace-this-link" rel="noopener">Buy with Stripe</a>
+        </div>
+
+        <div class="book">
+          <h3>Fragments For The Unimpressed</h3>
+          <p class="meta">Fragments, prose, aphorisms · PDF</p>
+          <p>Short pieces for readers allergic to optimism, branding, and public enthusiasm.</p>
+          <a class="button" href="https://buy.stripe.com/replace-this-link" rel="noopener">Buy with Stripe</a>
+        </div>
+      
+        <p><a class="back-top" href="#contents">Back to contents</a></p>
+      </section>
+
+      <section id="about">
+        <p class="type">About</p>
+        <h1>About this site</h1>
+        <p>This site is intentionally plain. It is built for reading on old laptops, slow phones, cheap tablets, Kindle browsers, and anything else that can open a basic HTML page.</p>
+        <p>The work here leans misanthropic, observational, literary, and suspicious of easy answers. It is not motivational writing. It is not content. It is not therapy. It is a record of looking at the world without pretending to enjoy the performance.</p>
+
+        <div class="reader-note">
+          <strong>Reading note:</strong> this page is intentionally simple. On Kindle, use the Contents links, the browser Back button, and the Back to contents links. Replace Stripe links in the Books section with your real payment links.
+        </div>
+      
+        <p><a class="back-top" href="#contents">Back to contents</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Plain Press · One HTML file · Built for Kindle browsers and slow reading.</p>
+    </footer>
+  </div>
+</body>
+</html>
